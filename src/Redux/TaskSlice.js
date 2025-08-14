@@ -2,16 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 
 export const TaskSlice = createSlice({
     name: 'task',
-    initialState: {
-        done: null,
-        due: null
-    },
+    initialState: [],
     reducers: {
-        done: (state) => {
-            state.value = true
-        },
-        due: (state) => {
-            state.value = true
+        addTask: (state, action) => {
+            state.push({
+                id: Date.now(),
+                name: action.payload.name,
+                details: action.payload.details,
+                deadline: action.payload.deadline,
+                done: false
+            })
         }
     }
 })
