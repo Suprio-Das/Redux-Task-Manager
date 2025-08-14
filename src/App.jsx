@@ -1,12 +1,15 @@
 import './App.css'
 
 function App() {
+  const handleNewTaskSubmit = (e) => {
+    e.preventDefault();
+  }
   return (
     <div>
       <h1 className='text-3xl font-semibold text-center my-3'>Task Manager</h1>
       <section>
         <h2 className='text-xl text-center'>Add New Task</h2>
-        <form action="">
+        <form onSubmit={handleNewTaskSubmit}>
           <div className='flex flex-col items-center justify-center gap-5 my-3'>
             <input type="text" placeholder="Enter Task Name" className="input" name='taskName' />
             <input type="text" placeholder="Enter Task Details" className="textarea" name='taskDetails' />
