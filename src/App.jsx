@@ -1,8 +1,17 @@
+import { useDispatch } from 'react-redux';
 import './App.css'
 
 function App() {
+  const dispatch = useDispatch();
   const handleNewTaskSubmit = (e) => {
     e.preventDefault();
+    const form = e.target;
+    const name = form.taskName.value;
+    const details = form.taskDetails.value;
+    const deadline = form.deadline.value;
+    const newTask = { name, details, deadline };
+    if (name === '' || details === '' || deadline === '') return;
+    console.log(newTask)
   }
   return (
     <div>
