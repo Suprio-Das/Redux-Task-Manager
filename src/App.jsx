@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import './App.css'
-import { addTask, doneTask } from './Redux/TaskSlice';
+import { addTask, deleteTask, doneTask } from './Redux/TaskSlice';
 
 function App() {
   const tasks = useSelector((state) => state.task)
@@ -55,7 +55,7 @@ function App() {
                         <td>{task.deadline}</td>
                         <td>
                           <button onClick={() => dispatch(doneTask(task.id))} className='btn btn-success btn-xs me-2'>{task.done === true ? "Done" : "Mark Done"}</button>
-                          <button className='btn btn-error btn-xs'>Delete</button>
+                          <button onClick={() => dispatch(deleteTask(task.id))} className='btn btn-error btn-xs'>Delete</button>
                         </td>
                       </tr>)
                     }
