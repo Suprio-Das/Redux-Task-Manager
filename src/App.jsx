@@ -37,8 +37,9 @@ function App() {
                 <tr>
                   <th></th>
                   <th>Name</th>
-                  <th>Job</th>
-                  <th>Favorite Color</th>
+                  <th>Details</th>
+                  <th>Deadline</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>
@@ -48,6 +49,10 @@ function App() {
                   <td>Cy Ganderton</td>
                   <td>Quality Control Specialist</td>
                   <td>Blue</td>
+                  <td>
+                    <button className='btn btn-success btn-xs me-2'>Mark Done</button>
+                    <button className='btn btn-error btn-xs'>Delete</button>
+                  </td>
                 </tr>
                 {/* row 2 */}
                 <tr>
