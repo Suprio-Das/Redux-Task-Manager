@@ -12,6 +12,12 @@ export const TaskSlice = createSlice({
                 deadline: action.payload.deadline,
                 done: false
             })
+        },
+        doneTask: (state, action) => {
+            const task = state.find(t => t.id === action.payload);
+            if (task) {
+                task.done = !task.done;
+            }
         }
     }
 })
