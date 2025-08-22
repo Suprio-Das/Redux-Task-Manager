@@ -4,3 +4,5 @@ A simple task manager crafted with Redux Toolkit for state management. <br><br>
 - User can add new task
 - Mark as Done task
 - Delete Task
+
+# Technlogies: 
