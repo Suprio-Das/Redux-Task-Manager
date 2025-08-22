@@ -7,3 +7,4 @@ A simple task manager crafted with Redux Toolkit for state management. <br><br>
 
 # Technlogies: 
 - Vite
+- Redux
